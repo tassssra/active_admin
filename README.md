@@ -57,7 +57,22 @@ gemを追加したのでサーバー再起動。一部日本語化される
 
 `config/locales/ja.yml`を新規作成
 
+以下のように書く
+```
+ja:
+  activerecord:
+    models:
+      user: 'ユーザー'
+      comment: 'コメント'
+      admin_user: '管理者'
+    attributes:
+      user:
+        name: '名前'
+        age: '年齢'
+        address: '住所'
+```
 
+`Admin Users`はスネークケースで表記。modelなので単数形にする。
 
 
 
