@@ -38,6 +38,11 @@ AdminUserのseedデータをDBに入れて管理者ログインできるよう�
 
 `bin/rails g active_admin:resource user`
 
+このままだとユーザー追加はまだできないので`admin/users.rb`にパラメーターの追加を許可する
+
+permit_paramsの右に許可するパラメーターを記述(migrationファイル参照)
+`permit_params :name, :age, :address`
+
 
 
 
