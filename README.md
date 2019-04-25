@@ -43,6 +43,25 @@ AdminUserのseedデータをDBに入れて管理者ログインできるよう�
 permit_paramsの右に許可するパラメーターを記述(migrationファイル参照)
 `permit_params :name, :age, :address`
 
+#### 日本語化
+
+gem 'rails-i18n'
+
+`config/application.rb`
+
+`class Application < Rails::Application`に以下を追記
+
+`config.i18n.default_locale = :ja`
+
+gemを追加したのでサーバー再起動。一部日本語化される
+
+`config/locales/ja.yml`を新規作成
+
+
+
+
+
+
 
 
 
