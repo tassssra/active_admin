@@ -1,24 +1,48 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 手順
 
-Things you may want to cover:
+`bin/rails db:create`
 
-* Ruby version
+`bin/rails g model User name:string age:integer address:string`
 
-* System dependencies
+`bin/rails db:migrate`
 
-* Configuration
+Gemfileに以下のgemを追加
 
-* Database creation
+gem `active_admin`
 
-* Database initialization
+gem `devise`
 
-* How to run the test suite
+`bundle install --path vendor/bundle`
 
-* Services (job queues, cache servers, search engines, etc.)
+active_adminに必要なファイルをインストール
+`bin/rails g active_admin:install`
 
-* Deployment instructions
+`bin/rails db:migrate`
 
-* ...
+AdminUserのseedデータをDBに入れて管理者ログインできるようにする
+`bin/rails db:seed`
+
+サーバー起動
+
+`bin/rails s`
+
+`localhost:3000/admin`
+
+`db/seeds.rb`に書いてある`admin@example.com`, `password` でログイン
+
+`New Admin User`ボタンから新しい管理者を作成
+
+最初の管理者を削除してログインし直す
+
+`bin/rails g active_admin:resource user`
+
+
+
+
+
+
+
+
+
